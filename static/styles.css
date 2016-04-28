@@ -8,3 +8,14 @@ body {
 	opacity: .7;
 	margin-top: 50px;
 }
+
+h3 {
+	color: white;
+	text-align: center;
+}
+
+.transparent-input {
+	background-color:rgba(0,0,0,0) !important;
+    border:none !important;
+    box-shadow:none !important;
+}
