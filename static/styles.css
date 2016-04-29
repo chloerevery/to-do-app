@@ -19,3 +19,11 @@ h3 {
     border:none !important;
     box-shadow:none !important;
 }
+
+.delete{
+    color: red;
+    display: none;
+}
+.checkbox:hover .delete {
+   display:block  
+}
