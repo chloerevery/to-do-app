@@ -13,7 +13,6 @@
 					<h3>My Todos:</h3>
 					<!-- todo checkboxes go here -->
 					<div class="todos">
-<<<<<<< HEAD
 					    <div class="input-group">
 					        	<span class="input-group-addon">
         					 		<input type="checkbox" aria-label="Checkbox for following text input">
@@ -34,27 +33,11 @@
 					      </span>
 					    </div>
 
-					<form method = "post">
-=======
-						<div class="checkbox">
-							<label>
-							<input type="checkbox"> Check me out
-							<span class = "delete">X</span>
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-							<input type="checkbox"> Do you see an x?
-							<span class = "delete">X</span>
-							</label>
-						</div>
 						 {% for todo in todos %}
 					    <div class="checkbox"><label><input type="checkbox">{{ todo.text }}</label></div>
 					    {% endfor %}
-					</div>
 
 					<form method="post">
->>>>>>> origin/master
   						<fieldset class="form-group">
 						    <input type="text" class="form-control transparent-input" id="newToDo" name = "newtodo" placeholder="+ New Todo">
 						    <input type="submit" style="display:none"/>
