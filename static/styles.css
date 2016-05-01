@@ -1,16 +1,16 @@
 body {
 	background-image: url("mountain-background.jpg");
 	background-size: cover;
+	color: white;
 }
 
 .backsplash {
-	background-color: black;
-	opacity: .7;
+	background-color:rgba(0,0,0,0.7);
 	margin-top: 50px;
 }
 
 h3 {
-	color: white;
+	color: rgb(240,240,240);
 	text-align: center;
 }
 
@@ -18,6 +18,7 @@ h3 {
 	background-color:rgba(0,0,0,0) !important;
     border:none !important;
     box-shadow:none !important;
+    color: rgb(255,255,255);
 }
 /*.form-control {
 	text-decoration: line-through;
@@ -33,5 +34,10 @@ h3 {
     display: none;
 }
 .checkbox:hover .delete {
+<<<<<<< HEAD
    display:block  
 }*/
+=======
+   display:block;
+}
+>>>>>>> origin/master

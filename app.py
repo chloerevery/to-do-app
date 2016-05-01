@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect
 from flask_sqlalchemy import SQLAlchemy
 
 
@@ -27,25 +27,39 @@ db.create_all()
 
 
 @app.route('/')
-def starting_page():
+def starting_page(): #this is called when the user has not yet entered any todos, including the first time they visit the page
 
 	table = Todo.query.all()
+	print("here")
 	print(table)
+	todos = Todo.query.all()
+	print("todos contents:")
+	print(todos)
 
-	return render_template('index.html')
+	return render_template('index.html',
+							todos=todos)
+
+
 
 @app.route('/', methods = ['POST'])
 def insert():
+	print("got here")
 	text = request.form['newtodo']
-	toAdd = Todo(text)
+	if len(text)>0: # a teeny bit of validation
+		print("text = " + text)
+		toAdd = Todo(text)
 
-	db.session.add(toAdd)
-	db.session.commit();
+		db.session.add(toAdd)
+		db.session.commit();
+		return redirect('/') # a redirect clears the form input
 
-	table = Todo.query.all()
-	print(table)
+	todos = Todo.query.all()
+	print("todos query results:")
+	print(todos)
 	
-	return render_template('index.html')
+	return render_template('index.html',
+							todos=todos)
+	
 
 
 
