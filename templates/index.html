@@ -13,12 +13,10 @@
 					<h3>My Todos:</h3>
 					<!-- todo checkboxes go here -->
 
-
-
 						 {% for todo in todos %}
 					    <div class="checkbox"><input type="checkbox" class="check"><label>{{ todo.text }}</label>
 
-					    <button type="submit" class="btn btn-secondary outline btn-sm pull-right" id = "delete">X</button></div>
+					    <button type="submit" class="btn btn-secondary outline pull-right" id = "delete">X</button></div>
 					    {% endfor %}
 
 					<form method="post">

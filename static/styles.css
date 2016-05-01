@@ -26,6 +26,7 @@ h3 {
 }
 
 .outline {
+	font-weight: bold;
 	background: none;
 	padding: 0 0 0 0;
 }
