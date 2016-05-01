@@ -25,11 +25,15 @@
 							<span class = "delete">X</span>
 							</label>
 						</div>
+						 {% for todo in todos %}
+					    <div class="checkbox"><label><input type="checkbox">{{ todo.text }}</label></div>
+					    {% endfor %}
 					</div>
 
-					<form>
+					<form method="post">
   						<fieldset class="form-group">
-						    <input type="newtodo" class="form-control transparent-input" id="newToDo" name = "newtodo" placeholder="New Todo">
+						    <input type="text" class="form-control transparent-input" id="newToDo" name = "newtodo" placeholder="+ New Todo">
+						    <input type="submit" style="display:none"/>
 					  </fieldset>
 					 </form>
 				</div>
