@@ -13,21 +13,27 @@
 					<h3>My Todos:</h3>
 					<!-- todo checkboxes go here -->
 					<div class="todos">
-						<div class="checkbox">
-							<label>
-							<input type="checkbox"> Check me out
-							<span class = "delete">X</span>
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-							<input type="checkbox"> Do you see an x?
-							<span class = "delete">X</span>
-							</label>
-						</div>
-					</div>
+					    <div class="input-group">
+					        	<span class="input-group-addon">
+        					 		<input type="checkbox" aria-label="Checkbox for following text input">
+      							</span>
+					      <input type="text" class="form-control" readonly = "readonly" value = "First Todo">
+					      <span class="input-group-btn">
+					        <button class="btn btn-danger" type="button">X</button>
+					      </span>
+					    </div>
 
-					<form>
+					    <div class="input-group">
+					        	<span class="input-group-addon">
+        					 		<input type="checkbox" aria-label="Checkbox for following text input">
+      							</span>
+					      <input type="text" class="form-control" readonly = "readonly" value = "Second Todo">
+					      <span class="input-group-btn">
+					        <button class="btn btn-danger" type="button">X</button>
+					      </span>
+					    </div>
+
+					<form method = "post">
   						<fieldset class="form-group">
 						    <input type="newtodo" class="form-control transparent-input" id="newToDo" name = "newtodo" placeholder="New Todo">
 					  </fieldset>
