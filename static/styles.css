@@ -20,9 +20,29 @@ h3 {
     box-shadow:none !important;
     color: rgb(255,255,255);
 }
+
 .check:checked + label{
 	text-decoration: line-through;
 }
+
+.outline {
+	background: none;
+	padding: 0 0 0 0;
+}
+
+.outline:hover {
+	color: red;
+}
+
+label {
+	margin-left: -1em;
+}
+
+.checkbox {
+	margin-left: 2em;
+}
+
+
 
 
 
