@@ -15,7 +15,7 @@
 					<div class="todos">
 					    <div class="input-group">
 					        	<span class="input-group-addon">
-        					 		<input type="checkbox" aria-label="Checkbox for following text input">
+        					 		<input type="checkbox" class = "check" aria-label="Checkbox for following text input">
       							</span>
 					      <input type="text" class="form-control" readonly = "readonly" value = "First Todo">
 					      <span class="input-group-btn">
@@ -23,15 +23,15 @@
 					      </span>
 					    </div>
 
-					    <div class="input-group">
-					        	<span class="input-group-addon">
-        					 		<input type="checkbox" aria-label="Checkbox for following text input">
-      							</span>
-					      <input type="text" class="form-control" readonly = "readonly" value = "Second Todo">
-					      <span class="input-group-btn">
-					        <button class="btn btn-danger" type="button">X</button>
-					      </span>
-					    </div>
+					<form class = "form-inline">
+					  <div class="checkbox">
+					      <input type="checkbox" class = check>
+					    <label> Second Todo </label>
+					  </div>
+					  <button type="submit" class="btn btn-danger btn-sm" id = "delete">X</button>
+					</form>
+
+
 
 						 {% for todo in todos %}
 					    <div class="checkbox"><label><input type="checkbox">{{ todo.text }}</label></div>

@@ -20,9 +20,9 @@ h3 {
     box-shadow:none !important;
     color: rgb(255,255,255);
 }
-/*.form-control {
+.check:checked + label{
 	text-decoration: line-through;
-}*/
+}
 
 
 
