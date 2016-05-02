@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+	<html>
+	<head>
+		<title>Todo List</title>
+		<link href="../static/bootstrap.min.css" rel="stylesheet">
+		<link href="../static/styles.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="backsplash col-md-6 col-md-offset-3">
+					<h3>My Todos:</h3>
+					<!-- todo checkboxes go here -->
+
+						 {% for todo in todos %}
+					    <div class="checkbox">
+					    	<form action="/delete/{{todo.id}}" method="post">
+						    	<input type="checkbox" class="check" name="{{todo.id}}">
+
+						    	<label>{{ todo.text }}</label>
+
+						    	<button type="submit" class="btn btn-secondary outline pull-right" id = "delete">X</button>
+							</form>
+						</div>
+					    {% endfor %}
+
+					<form method="post">
+  						<fieldset class="form-group">
+						    <input type="text" class="form-control transparent-input" id="newToDo" name = "newtodo" placeholder="+ New Todo">
+						    <input type="submit" style="display:none"/>
+					  </fieldset>
+					 </form>
+				</div>
+			</div>
+		
+
+		</div>
+
+	</body>
+</html>

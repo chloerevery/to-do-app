@@ -54,15 +54,19 @@ def insert():
 		return redirect('/') # a redirect clears the form input
 
 	todos = Todo.query.all()
-	print("todos query results:")
+	print("todos query results after insert:")
 	print(todos)
 	
 	return render_template('index.html',
 							todos=todos)
-	
 
-
-
+@app.route('/delete/<int:todo_id>', methods = ['POST'])
+def delete(todo_id):
+	print("Beginning delete method")
+	toDelete = Todo.query.get(todo_id)
+	db.session.delete(toDelete)
+	db.session.commit()
+	return redirect('/')
 
 
 if __name__ == '__main__':
