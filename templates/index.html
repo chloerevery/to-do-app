@@ -14,9 +14,15 @@
 					<!-- todo checkboxes go here -->
 
 						 {% for todo in todos %}
-					    <div class="checkbox"><input type="checkbox" class="check"><label>{{ todo.text }}</label>
+					    <div class="checkbox">
+					    	<form action="/delete/{{todo.id}}" method="post">
+						    	<input type="checkbox" class="check" name="{{todo.id}}">
 
-					    <button type="submit" class="btn btn-secondary outline pull-right" id = "delete">X</button></div>
+						    	<label>{{ todo.text }}</label>
+
+						    	<button type="submit" class="btn btn-secondary outline pull-right" id = "delete">X</button>
+							</form>
+						</div>
 					    {% endfor %}
 
 					<form method="post">
