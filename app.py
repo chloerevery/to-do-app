@@ -84,24 +84,23 @@ def delete(todo_id): # This is called whenever the Delete button next to a todo 
 	return redirect('/') # Again we return to the starting_page() so that the app can be
 	# displayed with the previous tuple deleted
 
-
 @app.route('/edit/<int:todo_id>', methods = ['POST'])
-def edit(todo_id): # This is called whenever the Delete button next to a todo element is
-# clicked, signifiying that the user intends to delete the corresponding element. We 
-# temporarily jump to a different route to do the work of deleting, then redirect back to
-# the index page
+def edit(todo_id): # This is called whenever a user clicks a todo, types something new in,
+# and presses enter--signifiying that the user intends to edit the corresponding element. We 
+# temporarily jump to a different route to do the work of updating that entry in the database,
+# then redirect back to the index page
 
-	# When the Delete button is clicked, we direct to a route that contains the id of the 
-	# tuple toDelete in the route itself. It is then easy to retrieve this id and use it to
-	# select for the unique tuple toDelete in the relation (since id is a primary key)
+	# When the Edit action is triggered via a form submission, we direct to a route that contains
+	# the id of the tuple toEdit in the route itself. It is then easy to retrieve this id and use
+	# it to update the tuple in the relation (since id is a primary key)
 	toEdit = Todo.query.get(todo_id)
 	toEdit.text = request.form['edittodo']
 	db.session.commit()
 
-# whenever something is deleted (or added) we want to 
+# whenever something is edited (or added or deleted) we want to 
 
 	return redirect('/') # Again we return to the starting_page() so that the app can be
-	# displayed with the previous tuple deleted
+	# displayed with the updated tuple
 
 
 if __name__ == '__main__':
