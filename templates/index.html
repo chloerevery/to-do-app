@@ -15,24 +15,20 @@
 
 						 {% for todo in todos %}
 					    <div class="checkbox">
-					    	<form style ='float: left' class = "form-inline" action="/edit/{{todo.id}}" method="post">
+					    	<form id = "oldtodos" class = "form-inline" action="/edit/{{todo.id}}" method="post">
 						    	&#149;<input type="text" class="form-control transparent-input" id="{{ todo.id }}" name = "edittodo" placeholder="{{ todo.text }}">
 						    	<input type="submit" style="display:none"/>
 
 						    	</form>
-						    <form style ='float: right' action="/delete/{{todo.id}}" method="post">
+						    <form id ="deleteform" action="/delete/{{todo.id}}" method="post">
 
-						    	<button type="submit" class="btn btn-secondary outline pull-right btn-sm" id = "delete">X</button>
+						    	<button type="submit" class="btn btn-secondary outline pull-right btn-sm" id = "x-button">X</button>
 							</form>
 						</div>
-						<br>
 					    {% endfor %}
-					</br>
-					<form method="post" style = "padding-left: 2%">
-  						<!--<fieldset class="form-group">-->
+					<form id = "new-todo-form" method="post">
 						    <input type="text" class="form-control transparent-input" id="newToDo" name = "newtodo" placeholder="+ New Todo">
 						    <input type="submit" style="display:none"/>
-					  <!--</fieldset>-->
 					 </form>
 				</div>
 			</div>

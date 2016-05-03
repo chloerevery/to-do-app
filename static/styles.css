@@ -37,19 +37,21 @@ label {
 
 .checkbox {
 	margin-left: 2em;
+	clear: both;
 }
 
-
-
-
-
-
-
-
-/*.delete{
-    color: red;
-    display: none;
+#oldtodos{
+	float: left;
 }
-.checkbox:hover .delete {
-   display:block  
-}*/
+
+#deleteform {
+	float: right;
+}
+
+#x-button {
+	padding-top: 40%;
+}
+
+#new-todo-form {
+	clear: both; padding-left: 2%
+}
