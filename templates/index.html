@@ -15,10 +15,8 @@
 
 						 {% for todo in todos %}
 					    <div class="checkbox">
-					    	<form action="/edit/{{todo.id}}" method="post">
-					    		
-						
-						    	&#149;<input type="text" class="form-control transparent-input" id="{{ todo.id }}" name = "edittodo"placeholder="{{ todo.text }}">
+					    	<form class = "form-inline" action="/edit/{{todo.id}}" method="post">
+						    	&#149;<input type="text" class="form-control transparent-input" id="{{ todo.id }}" name = "edittodo" placeholder="{{ todo.text }}">
 						    	<input type="submit" style="display:none"/>
 
 						    	</form>

@@ -44,8 +44,7 @@ def starting_page(): # This is called when the user has not yet entered any todo
 	print("todos contents:")
 	print(todos)
 
-	return render_template('index.html',
-							todos=todos)
+	return render_template('index.html', todos=todos)
 
 
 
