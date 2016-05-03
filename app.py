@@ -78,8 +78,6 @@ def delete(todo_id): # This is called whenever the Delete button next to a todo 
 	db.session.delete(toDelete)
 	db.session.commit()
 
-# whenever something is deleted (or added) we want to 
-
 	return redirect('/') # Again we return to the starting_page() so that the app can be
 	# displayed with the previous tuple deleted
 
@@ -95,8 +93,6 @@ def edit(todo_id): # This is called whenever a user clicks a todo, types somethi
 	toEdit = Todo.query.get(todo_id)
 	toEdit.text = request.form['edittodo']
 	db.session.commit()
-
-# whenever something is edited (or added or deleted) we want to 
 
 	return redirect('/') # Again we return to the starting_page() so that the app can be
 	# displayed with the updated tuple
