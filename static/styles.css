@@ -21,10 +21,6 @@ h3 {
     color: rgb(255,255,255);
 }
 
-.check:checked + label{
-	text-decoration: line-through;
-}
-
 .outline {
 	font-weight: bold;
 	background: none;

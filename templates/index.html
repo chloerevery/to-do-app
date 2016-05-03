@@ -15,10 +15,14 @@
 
 						 {% for todo in todos %}
 					    <div class="checkbox">
-					    	<form action="/delete/{{todo.id}}" method="post">
-						    	<input type="checkbox" class="check" name="{{todo.id}}">
+					    	<form action="/edit/{{todo.id}}" method="post">
+					    		
+						
+						    	&#149;<input type="text" class="form-control transparent-input" id="{{ todo.id }}" name = "edittodo"placeholder="{{ todo.text }}">
+						    	<input type="submit" style="display:none"/>
 
-						    	<label>{{ todo.text }}</label>
+						    	</form>
+						    <form action="/delete/{{todo.id}}" method="post">
 
 						    	<button type="submit" class="btn btn-secondary outline pull-right" id = "delete">X</button>
 							</form>
